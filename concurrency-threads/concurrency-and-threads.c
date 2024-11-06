@@ -55,6 +55,7 @@ One thread in your program can wait for I/O, the CPU can switch to other threads
 // #define BASIC_EXAMPLE
 // #define COUNTER_EXAMPLE
 // gcc -o threads concurrency-and-threads.c -pthread -DBASIC_EXAMPLE
+// ./threads
 #ifdef BASIC_EXAMPLE
 // Basic threading example
 void *mythread(void *arg) {
@@ -99,6 +100,7 @@ ex: 2 threads want to update a global shared variable
 // ____________________________________________________________________________________________________________________________
 #ifdef COUNTER_EXAMPLE
 // gcc -o threads concurrency-and-threads.c -pthread -DCOUNTER_EXAMPLE
+// ./threads
 // Shared counter example demonstrating race conditions
 static volatile int counter = 0;
 
