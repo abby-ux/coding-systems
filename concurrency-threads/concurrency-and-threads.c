@@ -117,6 +117,15 @@ void *mythread(void *arg) {
 int main(int argc, char *argv[]) {
     pthread_t p1, p2;
     printf("main: begin (counter = %d)\n", counter);
+
+    /*
+    int pthread_create(pthread_t * thread, 
+                   const pthread_attr_t * attr, 
+                   void * (*start_routine)(void *), 
+                   void *arg);
+    attr: pointer to a structure that is used to define thread attributes like detached state, scheduling policy, stack address, etc. 
+    Set to NULL for default thread attributes.
+    */
     
     Pthread_create(&p1, NULL, mythread, "A");
     Pthread_create(&p2, NULL, mythread, "B");
