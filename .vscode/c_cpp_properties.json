@@ -1,19 +1,18 @@
 {
     "configurations": [
-      {
-        "name": "WSL",
-        "includePath": [
-          "/usr/include",
-          "/usr/local/include",
-          "/usr/include/x86_64-linux-gnu"
-        ],
-        "defines": [],
-        "compilerPath": "/usr/bin/gcc",
-        "cStandard": "c11",
-        "cppStandard": "c++17",
-        "intelliSenseMode": "linux-gcc-x64"
-      }
+        {
+            "name": "WSL",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/include/x86_64-linux-gnu"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x86"
+        }
     ],
     "version": 4
-  }
-  
+}

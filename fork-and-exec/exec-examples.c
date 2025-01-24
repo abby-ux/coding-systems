@@ -7,6 +7,41 @@
 #include <stdlib.h>
 #include <errno.h> 
 #include <sys/wait.h>
+#include <errno.h>
+
+
+
+
+
+
+int main() {
+    char dir[] = "my_directory"; // The directory to remove
+    char *args[] = {"rmdir", dir, NULL}; // Command and arguments
+
+    // Execute rmdir
+    if (execvp(args[0], args4) == -1) {
+        perror("execvp failed");
+        return 1;
+    }
+
+    // This line won't be reached if execvp succeeds
+    return 0;
+}
+// If execvp(args4[0], args4) is called:
+
+// The current process is replaced by the rmdir command.
+// The rmdir command is executed with dir as its argument.
+// If successful, the specified directory is removed.
+// If it fails, the program terminates with an error, and errno provides details about the failure.
+
+
+
+
+
+
+
+
+
 
 int main(){
 pid_t pid;
